@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      AGENDA DE CONTATOS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-list-header>Meus contatos</ion-list-header>
+    <ion-item *ngFor="let contato of contatos">
+      <ion-label (click) = "editar(contato)">{{contato.nome}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical = "bottom" horizontal = "end" slot = "fixed">
+    <ion-fab-button (click)="irParaCadastrar()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+</ion-content>

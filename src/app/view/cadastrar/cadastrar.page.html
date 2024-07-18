@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agenda de Contatos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-list>
+    <form [formGroup]="formCadastrar" (ngSubmit)="submitForm()" novalidate>
+      <ion-item>
+        <ion-input formControlName = "nome" label="Nome" placeholder="Insira o nome"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input formControlName = "telefone" type = "number" label="Telefone" placeholder="Insira o telefone"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input formControlName = "email" label="email" placeholder="Insira o email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-select formControlName = "genero" Label = "Gênero" placeholder="Selecione">
+          <ion-select-option value = "0">Não Declarado</ion-select-option>
+          <ion-select-option value = "1">Masculino</ion-select-option>
+          <ion-select-option value = "2">Feminino</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-button type = "submit" expand="full">Cadastrar</ion-button>
+    </form>
+  </ion-list>
+
+</ion-content>
