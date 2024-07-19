@@ -22,7 +22,7 @@ export class CadastrarPage implements OnInit {
   ngOnInit() {
     this.formCadastrar = this.formBuilder.group({
       nome: ['', [Validators.required, Validators.minLength(3)]],
-      telefone: ['',[Validators.required, Validators.min(8)]],
+      telefone: ['',[Validators.required, Validators.minLength(8)]],
       email: ['', [Validators.required, Validators.email]],
       genero: ['',[Validators.required]]
     });
